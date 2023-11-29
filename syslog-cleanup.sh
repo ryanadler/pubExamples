@@ -1,9 +1,10 @@
 #!/bin/bash
 ##
 # This script was meant as a method of making sure the syslog files and folders on your reciever system don't get too out of control
+# Assumptions: syslog-ng writes to /opt/syslog , you've already created /opt/storage, and have enough room on your disk to accomodate relevant files
 ##
 
-## Assumptions: syslog-ng writes to /opt/syslog , you've already created /opt/storage, and have enough room on your disk to accomodate relevant files
+## --> Compression
 
 # Stat: get the number of files that will be packed up
 fileCountPRE=$(/bin/find '/opt/syslog' -type f -name '*.log' -cmin +60 -exec ls {} \; | wc -l)
@@ -28,3 +29,13 @@ fileCountPOST=$(/bin/find '/opt/storage' -type f -name '*.log' -exec ls {} \; | 
 logger "Housekeeping - syslog files compressed for storage - Moved: $fileCountPRE , Compressed: $fileCountPOST"
 
 # Splunk alerts can be created for when PRE and POST aren't close to alert on housekeeping issues.
+
+## --> Cleanup
+
+# Stat: get the number of files that will be deleted
+fileCountPRE=$(/bin/find '/opt/storage' -type f -mmin +10079 -exec ls {} \; | wc -l)
+
+# Action: Remove Files
+/bin/find '/opt/storage' -type f -mmin +10079 -exec rm -f {} \;
+
+logger "Housekeeping - compressed syslog files over 7 days old removed - Count: $fileCountPRE"
