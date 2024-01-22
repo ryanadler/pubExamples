@@ -4,7 +4,7 @@ Exposure to Linux
 >> Raspberry Pi - https://www.raspberrypi.com/ | https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/
 >> CentOS/RHEL - https://www.centos.org/
 
-Exposure to Windows
+## Exposure to Windows
 >> Understanding the Event Viewer - https://learn.microsoft.com/en-us/shows/inside/event-viewer
 >> Understanding AD - https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview
 >> Understanding how to cross pollinate Windows and Linux with WSL - https://learn.microsoft.com/en-us/training/modules/wsl-introduction/ | https://ryanadler.medium.com/windows-11-wsl-and-bash-0ec0eb1d2e5b
