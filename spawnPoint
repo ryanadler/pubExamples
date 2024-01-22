@@ -1,5 +1,6 @@
-## Operating Systems
-Exposure to Linux
+## 2023/01/22 - For those looking to get into the "Cyber" workspace, the following are starting recommendations as curated by UltraViolet Cyber
+
+## Exposure to Linux
 >> Ubuntu - https://ubuntu.com/
 >> Raspberry Pi - https://www.raspberrypi.com/ | https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/
 >> CentOS/RHEL - https://www.centos.org/
@@ -9,23 +10,19 @@ Exposure to Linux
 >> Understanding AD - https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview
 >> Understanding how to cross pollinate Windows and Linux with WSL - https://learn.microsoft.com/en-us/training/modules/wsl-introduction/ | https://ryanadler.medium.com/windows-11-wsl-and-bash-0ec0eb1d2e5b
 
-
 ## Scripting Languages
 >> PowerShell - https://learn.microsoft.com/en-us/training/modules/script-with-powershell/
 >> bash - https://linuxconfig.org/bash-scripting-tutorial-for-beginners
 >> python - https://www.w3schools.com/python/python_intro.asp
 
-
 ## Basic Networking
 >> OSI Model - https://en.wikipedia.org/wiki/OSI_model
-
 
 ## Socials
 >> InfoSec Fediverse (Mastadon) - https://wiki.infosec.exchange/
 >> Stack Overflow - https://stackoverflow.com/
 >> Hacker News - https://news.ycombinator.com/ | https://thehackernews.com/
 >> Ubuntu Forums - https://ubuntuforums.org/
-
 
 ## Events
 >> Capture the Flag (CTF) - https://ctftime.org/event/list/ | https://www.hackthebox.com/hacker/ctf
