@@ -1,0 +1,16 @@
+#!/bin/bash
+
+## function for making a HEC token and checking to make sure it's not in use:
+
+genToken=$(tr -dc a-z0-9 </dev/urandom | head -c 32)
+newToken=$(echo "$genToken" | sed -E 's/(........)(....)(....)(....)(............)/\1-\2-\3-\4-\5/g')
+
+for existing in $(splunk btool inputs list http | grep token | sed 's/ //g' | sed 's/token=//g')
+        do 
+                if [ $existing = "$newToken" ]; then
+                        echo "this token already exists; exit and try again"
+                        exit 1
+                fi
+        done
+
+echo "New Token - $newToken"
